@@ -1,0 +1,141 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 6px;
+}
+
+.header__line__logo {
+    transition: 0.2s;
+}
+
+.header__line__logo:hover {
+    transform: scale(1.04);
+}
+
+.header__line__nav__btn {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__line__nav__btn:hover {
+    color: gray;
+}
+
+.header__line__nav__btn:not(:last-child){
+    margin-right: 105px;
+}
+
+.header__line__user {
+    display: flex;
+    align-items: center;
+}
+
+.header__line__user__avatar {
+    margin-right: 20px;
+}
+
+.header__line__user__name {
+    margin-right: 20px;
+}
+
+.header__line__user__drop {
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 80vh;
+    align-items: center;
+}
+
+.main__editform {
+    margin-top: 10%;
+    text-align: center;
+    align-items: center;
+}
+
+.main__editform__title {
+    font-size: 30px;
+}
+
+.main__editform__form{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+}
+
+.main__editform__form__field {
+    margin-top: 28px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    border: none;
+    height: 44px;
+    width: 370px;
+    padding-left: 8px;
+    font-size: 20px;
+}
+
+.main__editform__form__btn {
+    margin-top: 28px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    border: none;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.main__editform__form__btn:hover {
+    color: gray;
+}
+
+@media (max-width: 1300px){
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__line {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 690px){
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__line__nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .header__line__nav__btn:not(:last-child){
+        margin-right: 0px;
+    }
+
+    .main__editform__form__field {
+        width: 200px;
+    }
+}
