@@ -1,0 +1,272 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 6px;
+}
+
+.header__line__logo {
+    transition: 0.2s;
+}
+
+.header__line__logo:hover {
+    transform: scale(1.04);
+}
+
+.header__line__nav__btn {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__line__nav__btn:hover {
+    color: gray;
+}
+
+.header__line__nav__btn:not(:last-child){
+    margin-right: 105px;
+}
+
+.header__line__user {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__line__user__avatar {
+    margin-right: 20px;
+}
+
+.header__line__user__name {
+    margin-right: 20px;
+}
+
+.header__line__user__drop {
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    font-size: 16px;
+    width: 136px;
+    height: 69px;
+    top: 100%;
+    right: 0;
+    padding: 10px;
+    text-align: end;
+    display: none;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: gray;
+}
+
+.main {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.main__addform {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__addform__title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.main__addform__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.main__addform__form__field {
+    margin-bottom: 38px;
+    border: none;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 35%;
+    height: 8%;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.main__addform__form__textfield {
+    display: flex;
+    margin-bottom: 38px;
+    border: none;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 800px;
+    height: 350px;
+    resize: none;
+}
+
+.main__addform__form__textfield::placeholder {
+    text-align: center;
+    line-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[id="main__addform__form__file__input"]{
+    display: none;
+}
+
+label[for=main__addform__form__file__input] {
+    width: 293px;
+    height: 46px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.main__addform__form__file__choose {
+    display: flex;
+    align-items: center;
+    color: gray;
+    cursor: pointer;
+}
+
+.main__addform__form__file__choose__text {
+    margin-left: 65px;
+}
+
+.main__addform__form__file__choose__img {
+    margin-left: 35px;
+}
+
+.main__addform__form__btn {
+    margin-top: 28px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    border: none;
+    height: 46px;
+    width: 293px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.main__addform__form__btn:hover {
+    color: gray;
+}
+
+@media (max-width: 1300px){
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__line {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__cat {
+        margin-right: 0px;
+        margin-bottom: 40px;
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .main__post {
+        width: 80vh;
+    }
+    .main__post__single__content__image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .main__addform__form__field {
+        width: 300px;
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 870px){
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__line__nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .header__line__nav__btn:not(:last-child){
+        margin-right: 0px;
+    }
+
+    .main__addform__form__textfield {
+        width: 500px;
+    }
+
+    .main__addform__form__field {
+        width: 300px;
+        height: 40px;
+    }
+
+}
+
+
+@media (max-width: 520px){
+    .main__addform__form__textfield {
+        width: 200px;
+        height: 200px;
+    }
+
+    .main__addform__form__field {
+        width: 200px;
+    }
+
+    .main__addform__form__textfield::placeholder {
+        text-align: center;
+        line-height: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const token = localStorage.getItem('token-access');
+        if (!token) {
+            window.location.href = '../pages/sign-in.html';
+        }
+    </script>
+    <link rel="stylesheet" href="/css/post-add.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    <title>AddPost</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__line">
+            <div class="header__line__logo">
+                <a href="/index.html">
+                    <img src="/assets/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header__line__nav">
+                <a class="header__line__nav__btn" href="subscriptions.html">Subscriptions</a>
+                <a class="header__line__nav__btn" href="post-add.html">New Post</a>
+                <a class="header__line__nav__btn" href="my-posts.html">My Posts</a>
+            </div>
+            <div class="header__line__user">
+                <img class="header__line__user__avatar" src="/assets/avatar.png" alt="avatar">
+                <p class="header__line__user__name"></p>
+                <img class="header__line__user__drop" src="/assets/arrow.png" alt="arrow">
+                <div class="menu">
+                    <a href="/pages/edit-profile.html">Edit</a><br>
+                    <a id="logout-link" href="/pages/sign-in.html">Log Out</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__underline">
+            <hr>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__addform">
+            <p class="main__addform__title">New Post</p>
+            <form class="main__addform__form" action="">
+                <input class="main__addform__form__field" type="text" placeholder="Title" required>
+                <input class="main__addform__form__field" type="text" placeholder="Category" required>
+                <textarea class="main__addform__form__textfield" name="text" placeholder="Text" required></textarea>
+                <div class="main__addform__form__file">
+                    <label for="main__addform__form__file__input">
+                        <div class="main__addform__form__file__choose">
+                            <p class="main__addform__form__file__choose__text" id="file-name">Choose image</p>
+                            <img class="main__addform__form__file__choose__img" src="/assets/input_file.png" alt="">
+                        </div>
+                        <input id="main__addform__form__file__input" type="file" required>
+                    </label>
+                </div>
+                    <input class="main__addform__form__btn" type="submit" value="Publish">
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="../js/post-add.js"></script>
+</body>
+</html>

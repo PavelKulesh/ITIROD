@@ -1,0 +1,269 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 6px;
+}
+
+.header__line__logo {
+    transition: 0.2s;
+}
+
+.header__line__logo:hover {
+    transform: scale(1.04);
+}
+
+.header__line__nav__btn {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__line__nav__btn:hover {
+    color: gray;
+}
+
+.header__line__nav__btn:not(:last-child){
+    margin-right: 105px;
+}
+
+.header__line__user {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__line__user__avatar {
+    margin-right: 20px;
+}
+
+.header__line__user__name {
+    margin-right: 20px;
+}
+
+.header__line__user__drop {
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    font-size: 16px;
+    width: 136px;
+    height: 69px;
+    top: 100%;
+    right: 0;
+    padding: 10px;
+    text-align: end;
+    display: none;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: gray;
+}
+
+.main {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.main__cat {
+    background-color: #F2F2F2;
+    width: 20%;
+    height: 80vh;
+    margin-right: 5%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.main__cat__title {
+    margin-top: 10px;
+    margin-bottom: 23px;
+    font-size: 30px;
+}
+
+.main__cat__list__option {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 23px;
+    height: 15px;
+    align-items: center;
+}
+
+.main__cat__list__check {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.main__post {
+    width: 75%;
+    height: 80vh;
+    overflow: auto;
+}
+
+.main__post__single {
+    background-color: #F2F2F2;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.main__post__single__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.main__post__single__header__cat-name {
+    margin-top: 10px;
+}
+
+.main__post__single__header__title {
+    font-weight: 600;
+    margin-left: -5px;
+    margin-top: 10px;
+}
+
+.main__post__single__header__user {
+    display: flex;
+    align-items: center;    
+    margin-top: 10px;
+}
+
+.main__post__single__header__user__avatar {
+    margin-right: 5px;
+}
+
+.main__post__single__content {
+    display: flex;
+}
+
+.main__post__single__content__image {
+    margin-left: 22px;
+    margin-right: 12px;
+    height: 200px;
+    width: 200px;
+}
+
+.main__post__single__content__text {
+    margin-right: 22px;
+}
+
+.main__post__single__info {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.main__post__single__info__date {
+    margin-bottom: 10px;
+}
+
+.main__post__single__info__read-more {
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.main__post__single__info__read-more:hover {
+    color: gray;
+}
+
+@media (max-width: 1300px){
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__line {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__cat {
+        margin-right: 0px;
+        margin-bottom: 40px;
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .main__post {
+        width: 80vh;
+    }
+    .main__post__single__content__image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 690px){
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__line__nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .header__line__nav__btn:not(:last-child){
+        margin-right: 0px;
+    }
+
+    .main__post__single__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__post__single__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__post__single__content__image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .main__post {
+        width: 40vh;
+    }
+}
